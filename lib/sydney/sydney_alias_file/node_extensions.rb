@@ -38,34 +38,42 @@
   end
 
   class AliasEntry < SyntaxNode
+    # Return the AliasComment nodes as an array
     def comments
       entry_comments.elements
     end
 
+    # Return the comments as a string
     def comment
       comments.map(&:to_s).join(' ')
     end
 
+    # Return the child AliasDefinition node
     def alias
       definition
     end
   end
 
   class AliasComment < SyntaxNode
+    # Return the comment without the preceding # and surrounding whitespace
     def to_s
       comment_text.text_value.strip
     end
   end
 
   class AliasDefinition < SyntaxNode
+    # Return the alias definition without the preceding 'alias' and
+    # surrounding whitespace
     def to_s
       "#{shortcut} = #{command}"
     end
 
+    # Return the command line shortcut (alias)
     def shortcut
       prefix.text_value.strip
     end
 
+    # Return the command to be executed in place of the alias
     def command
       stripped_command = aliased_command.to_s.strip
       stripped_command[1,stripped_command.length - 2]
