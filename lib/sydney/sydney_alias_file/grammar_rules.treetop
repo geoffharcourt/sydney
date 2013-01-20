@@ -1,0 +1,49 @@
+grammar SydneyAliasFile
+  rule document
+    section* <Document>
+  end
+
+  rule section
+    leading_whitespace:whitespace section_title:section_comment* content:alias_entry+ <Section>
+  end
+
+  rule section_comment
+    comment_code:comment_leader 2.. content:line <SectionComment>
+  end
+
+  rule alias_entry
+    entry_comments:alias_comment* definition:alias_definition <AliasEntry>
+  end
+
+  rule alias_comment
+    leading:comment_leader !comment_leader comment_text:line <AliasComment>
+  end
+
+  rule alias_definition
+    leading:'alias ' prefix:[A-Za-z\-\s\.]+ equal_sign:[\s]* '=' [\s]* aliased_command:text end_of_line:newline* <AliasDefinition>
+  end
+
+  rule quote_character
+    [\'\"]
+  end
+
+  rule line
+    content:text trailer:newline* <Line>
+  end
+
+  rule comment_leader
+    '#'
+  end
+
+  rule whitespace
+    [\s\n]*
+  end
+
+  rule text
+    [^\n]+
+  end
+
+  rule newline
+    [\n]+
+  end
+end
