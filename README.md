@@ -1,5 +1,8 @@
 # Sydney
 
+[![Build Status](https://travis-ci.org/geoffharcourt/sydney.png?branch=master)](undefined)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/geoffharcourt/sydney)
+
 A [Treetop](https://github.com/nathansobo/treetop) parser for bash alias files. Organize your aliases by sections and keep comments associated with the aliases they document.
 
 Sydney was created to feed my process an alias file and feed it to
@@ -24,7 +27,7 @@ you can use `Sydney.sections` to return an array of Section nodes.
 
 Each section contains one or more AliasEntry nodes. An AliasEntry node
 ties comments (AliasComment) before an alias to the definition
-(AliasDefinition).
+(AliasDefinition). See the documentation
 
 ## Credits
 Sydney was created and is maintained by [Geoff Harcourt](http://github.com/geoffharcourt) at [Five Tool Development](http://fivetool.io).
