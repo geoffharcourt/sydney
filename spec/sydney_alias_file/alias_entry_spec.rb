@@ -7,6 +7,7 @@ describe SydneyAliasFile::AliasEntry do
 
   describe '#comments' do
     it "returns an array of all the AliasComment nodes" do
+      @alias_entry.comments.class.should eq(Array)
       @alias_entry.comments.count.should eq(2)
       @alias_entry.comments.first.class.should eq(SydneyAliasFile::AliasComment)
     end
