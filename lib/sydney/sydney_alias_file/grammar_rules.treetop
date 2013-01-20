@@ -28,7 +28,7 @@ grammar SydneyAliasFile
   end
 
   rule line
-    content:text trailer:newline* <Line>
+    content:text trailer:newline*
   end
 
   rule comment_leader
