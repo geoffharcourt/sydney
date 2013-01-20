@@ -16,4 +16,10 @@ describe SydneyAliasFile::AliasDefinition do
       @alias_definition.command.should eq('tail -f')
     end
   end
+
+  describe "to_s" do
+    it "returns the shortcut and command separated by an equal sign surrounded by single spaces" do
+      @alias_definition.to_s.should eq('tlf = tail -f')
+    end
+  end
 end

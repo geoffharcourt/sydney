@@ -24,7 +24,25 @@ module Sydney
       raise Exception, "Parse error at offset: #{@@parser.index}"
     end
 
-    return tree
+    self.clean_tree(tree)
+
+    tree
+  end
+
+  def self.aliases(data)
+    sections(data).map(&:entries).flatten.map(&:alias).flatten
+  end
+
+  def self.sections(data)
+    parse(data).sections
+  end
+
+  private
+
+  def self.clean_tree(root_node)
+    return if(root_node.elements.nil?)
+    root_node.elements.delete_if{|node| node.class.name == "Treetop::Runtime::SyntaxNode" }
+    root_node.elements.each {|node| self.clean_tree(node) }
   end
 
 end

@@ -52,6 +52,10 @@
   end
 
   class AliasDefinition < SyntaxNode
+    def to_s
+      "#{shortcut} = #{command}"
+    end
+
     def shortcut
       prefix.text_value.strip
     end
