@@ -1,12 +1,10 @@
 # Sydney
 
-A Treetop parser for bash alias files. Organize your aliases by
-sections and keep comments associated with the aliases they document.
+A [Treetop](https://github.com/nathansobo/treetop) parser for bash alias files. Organize your aliases by sections and keep comments associated with the aliases they document.
 
 Sydney was created to feed my process an alias file and feed it to
 [cheaters](http://github.com/brettterpstra/cheaters), an excellent
-cheatsheet system. The output can be either a Treetop::Runtime::SyntaxNode tree, an array of the sections in your alias file, or an array of the
-aliases without section groupings.
+cheatsheet system. The output from Sydney can be a Treetop::Runtime::SyntaxNode tree, an array of the sections in your alias file, or an array of the aliases without section groupings.
 
 ## Installation
 
@@ -32,6 +30,8 @@ ties comments (AliasComment) before an alias to the definition
 Sydney was created and is maintained by [Geoff Harcourt](http://github.com/geoffharcourt) at [Five Tool Development](http://fivetool.io).
 
 ## Contributing
+
+I'm looking for further ideas for Sydney. Please report parsing issues through [Github Issues](https://github.com/geoffharcourt/sydney/issues). Pull requests for feature additions are welcome!
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
