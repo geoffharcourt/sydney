@@ -6,9 +6,12 @@
   end
 
   class Document < SyntaxNode
+    # Return an array of Section nodes
     def sections
       to_a
     end
+
+    private
 
     def to_a
       elements.map{ |element| element }
@@ -16,16 +19,19 @@
   end
 
   class Section < SyntaxNode
+    # Return all the '##'-led lines in the section as a single string
     def title
       section_title.elements.map(&:to_s).join(' ')
     end
 
+    # Return the AliasEntry nodes as an array
     def entries
       content.elements
     end
   end
 
   class SectionComment < SyntaxNode
+    # Return the comment without surrounding whitespace
     def to_s
       content.text_value.strip
     end

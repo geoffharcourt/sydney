@@ -14,6 +14,8 @@ module Sydney
   )
   @@parser = SydneyAliasFileParser.new
 
+  # Parse the supplied string and return a
+  # Treetop::Runtime::SyntaxNode tree
   def self.parse(data)
     # Pass the data over to the parser instance
     tree = @@parser.parse(data)
@@ -29,10 +31,12 @@ module Sydney
     tree
   end
 
+  # Parse the string and return an array of AliasEntry nodes
   def self.aliases(data)
     sections(data).map(&:entries).flatten.map(&:alias).flatten
   end
 
+  # Parse the string and return an array of Section nodes
   def self.sections(data)
     parse(data).sections
   end
