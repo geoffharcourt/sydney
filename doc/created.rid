@@ -1,0 +1,15 @@
+Sun, 20 Jan 2013 15:45:02 -0500
+./Gemfile	Sun, 20 Jan 2013 13:31:55 -0500
+./lib/sydney/sydney_alias_file/node_extensions.rb	Sun, 20 Jan 2013 15:44:57 -0500
+./lib/sydney/version.rb	Sun, 20 Jan 2013 14:50:22 -0500
+./lib/sydney.rb	Sun, 20 Jan 2013 15:35:56 -0500
+./LICENSE	Sun, 20 Jan 2013 14:08:00 -0500
+./Rakefile	Sun, 20 Jan 2013 13:31:55 -0500
+./spec/fixtures/aliases	Sun, 20 Jan 2013 13:21:56 -0500
+./spec/spec_helper.rb	Sun, 20 Jan 2013 14:05:08 -0500
+./spec/sydney_alias_file/alias_comment_spec.rb	Sun, 20 Jan 2013 13:37:41 -0500
+./spec/sydney_alias_file/alias_definition_spec.rb	Sun, 20 Jan 2013 15:15:51 -0500
+./spec/sydney_alias_file/alias_entry_spec.rb	Sun, 20 Jan 2013 15:42:35 -0500
+./spec/sydney_alias_file/document_spec.rb	Sun, 20 Jan 2013 13:37:41 -0500
+./spec/sydney_alias_file/section_spec.rb	Sun, 20 Jan 2013 13:37:41 -0500
+./spec/sydney_spec.rb	Sun, 20 Jan 2013 15:05:33 -0500
