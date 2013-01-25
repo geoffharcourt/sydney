@@ -1,6 +1,6 @@
 # Sydney
-
-[![Build Status](https://travis-ci.org/geoffharcourt/sydney.png?branch=master)](undefined)
+[![Gem Version](https://badge.fury.io/rb/sydney.png)](http://badge.fury.io/rb/sydney)
+[![Build Status](https://travis-ci.org/geoffharcourt/sydney.png?branch=master)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/geoffharcourt/sydney)
 
 A [Treetop](https://github.com/nathansobo/treetop) parser for bash alias files. Organize your aliases by sections and keep comments associated with the aliases they document.
